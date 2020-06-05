@@ -16,9 +16,9 @@ from os.path import isfile, join, isdir
 def olha_imagem(local_imagem):
     
     #local_imagem = (r".\images\Alam. Campinas One_Bed\IMG_8803.jpg")
-    cfg_teste = ("yolov3.cfg")
-    weight_teste = ("yolov3.weights")
-    txt_teste = ("yolov3.txt")
+    cfg_teste = ("./yolo_lib/yolov3.cfg")
+    weight_teste = ("./yolo_lib/yolov3.weights")
+    txt_teste = ("./yolo_lib/yolov3.txt")
     
     def get_output_layers(net):
         
