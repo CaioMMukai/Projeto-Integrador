@@ -19,17 +19,21 @@ dir_image = ("/images/")
 c = start_path +dir_image
 folders = os.listdir(start_path+dir_image)
 
-list_all_folder = []
+list_all_folder_dir = []
 for name in folders:
-    list_folder=os.path.join(start_path+dir_image,name)
-    list_all_folder.append(list_folder)
-for list_folder in list_all_folder:
+    folder=os.path.join(start_path+dir_image,name)
+    list_all_folder_dir.append(folder)
+    
+list_all_file_dir = []
+for list_folder in list_all_folder_dir:
     os.chdir(list_folder)
     files = filter(os.path.isfile, os.listdir())
     files = [os.path.join(list_folder, f) for f in files]
     os.chdir(start_path)
+    for teste in files:
+        list_all_file_dir.append(teste)
 list_all_itens = []
-for _ in files:
+for _ in list_all_file_dir:
     itens = olha_imagem(_)
     list_all_itens.append(itens)
 
@@ -40,3 +44,4 @@ for i, value in enumerate(list_all_itens):
 dfs = pd.concat(dfs, axis=0)
 dfs = dfs.groupby(['ID','Item'], as_index=False)[['Conf']].max()
 dfs.head()
+
