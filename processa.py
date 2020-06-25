@@ -19,7 +19,9 @@ def olha_imagem(local_imagem):
     cfg_teste = ("./yolo_lib/yolov3.cfg")
     weight_teste = ("./yolo_lib/yolov3.weights")
     txt_teste = ("./yolo_lib/yolov3.txt")
-    
+    path_image = os.path.normpath(local_imagem)
+    slipt_image=path_image.split(os.sep)
+
     def get_output_layers(net):
         
         layer_names = net.getLayerNames()
@@ -77,5 +79,5 @@ def olha_imagem(local_imagem):
                 class_ids.append(class_id)
                 confidences.append(float(confidence))
                 boxes.append([x, y, w, h])
-                view_list.append([numero_classe,percentual,label])
+                view_list.append([slipt_image[-2],numero_classe,percentual,label])
     return view_list
