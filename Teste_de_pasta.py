@@ -11,8 +11,9 @@ import numpy as np
 import os
 from os import listdir
 from os.path import isfile, join, isdir
-from processa import olha_imagem
-from utils import *
+from utils.processa import olha_imagem
+from utils.utils import *
+
 # =============================================================================
 # Le Imagen 
 # =============================================================================

@@ -9,14 +9,13 @@ import pandas as pd
 import numpy as np
 import os
 import sys
-import pandas as pd
-import json
+
+
+def read_csv(path):
+    return pd.read_csv(path, decimal=',', delimiter=";", low_memory=False, index_col = False, encoding='utf-8-sig')
 
 def save_as_csv(df, path):
     df.to_csv(path, sep=';', decimal=',', index=False, encoding='utf-8-sig')
 
-def read_csv(path):
-    return pd.read_csv(path, sep=';', decimal=',')
 
-def read_json(path):
-    return pd.read_json(path)
+
