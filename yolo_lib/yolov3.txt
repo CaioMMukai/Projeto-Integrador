@@ -56,7 +56,7 @@ donut
 cake
 chair
 couch
-Planta
+plant
 bed
 dining table
 toilet
