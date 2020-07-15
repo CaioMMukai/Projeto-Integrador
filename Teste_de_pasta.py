@@ -59,7 +59,7 @@ dfs.head()
 # =============================================================================
 # Cria Data frame das imagen
 # =============================================================================
-df_aps=read_csv('aps.csv')
+df_aps=read_csv('data/aps.csv')
 df_itens=pd.read_excel('TODAS_IMAGENS.xlsx')
 
 for id_ap in df_aps['ID'].unique():
@@ -75,5 +75,6 @@ for id_ap in df_aps['ID'].unique():
             df_aps.loc[df_aps['ID'] == id_ap, item] = 1
             df_aps.loc[df_aps['ID'] == id_ap, str(item)+'_conf'] = df_itens_ap.loc[df_itens_ap['Item'] == item, 'Conf'].values
             
-save_as_csv(df_aps,'Data_set.csv')
+            
+save_as_csv(df_aps,'data/Data_set.csv')
 print (x)
