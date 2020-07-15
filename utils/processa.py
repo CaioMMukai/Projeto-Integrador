@@ -79,5 +79,6 @@ def olha_imagem(local_imagem):
                 class_ids.append(class_id)
                 confidences.append(float(confidence))
                 boxes.append([x, y, w, h])
-                view_list.append([slipt_image[-2],numero_classe,percentual,label])
+                itens = ([slipt_image[-2],numero_classe,percentual,label])
+                view_list.append(itens)
     return view_list
