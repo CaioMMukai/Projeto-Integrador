@@ -3,6 +3,7 @@ images/
 *.jpg
 yolov3.weights
 pasta-share/
+Caio - AIzaSyB.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
